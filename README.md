@@ -1,4 +1,6 @@
 # Advanced-Computational-Methods-for-Social-Media-and-Text-Data
+
+## Introduction
 Course Title: *Essex Summer School Advanced Computational Methods for Social Media and Textual Data* (3b)
 
 Course Date: Monday 8 August – Friday 19 August 2022
@@ -6,6 +8,11 @@ Course Date: Monday 8 August – Friday 19 August 2022
 Key Course Objective: **Learn to program. Program to learn.**
 
 Course Website: https://essexsummerschool.com/summer-school-facts/courses/ess-2022-course-list/3b-advanced-methods-for-social-media-textual-data/
+
+- [2021/2020 Syllabus](http://cfariss.com/documents/Essex_Advanced_Computaitonal_Methods_2020_Syllabus.pdf)
+- [2019/2018 Syllabus](http://cfariss.com/documents/Essex_2F_2019_Syllabus.pdf)
+- [2017/2016 Syllabus](http://cfariss.com/documents/Essex_Exploration_Analysis_Social_Media_Data.pdf)
+- [2015 Syllabus](http://cfariss.com/documents/Essex_Analyzing_Big_Data.pdf)
 
 ## Course Content
 This course focuses on the research design and data analysis tools used to explore and understand social media and text data. The fundamentals of research design are the same throughout the social sciences, however the topical focus of this class is on computationally intensive data generating processes and the research designs used to understand and manipulate such data at scale. 
