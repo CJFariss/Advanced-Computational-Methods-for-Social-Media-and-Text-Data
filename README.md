@@ -9,6 +9,7 @@ Key Course Objective: **Learn to program. Program to learn.**
 
 Essex Course Website: https://essexsummerschool.com/summer-school-facts/courses/ess-2022-course-list/3b-advanced-methods-for-social-media-textual-data/
 
+### Past Course Syllabi 
 - [2021/2020 Syllabus](http://cfariss.com/documents/Essex_Advanced_Computaitonal_Methods_2020_Syllabus.pdf)
 - [2019/2018 Syllabus](http://cfariss.com/documents/Essex_2F_2019_Syllabus.pdf)
 - [2017/2016 Syllabus](http://cfariss.com/documents/Essex_Exploration_Analysis_Social_Media_Data.pdf)
