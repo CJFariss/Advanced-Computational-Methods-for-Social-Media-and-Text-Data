@@ -1,8 +1,8 @@
 ## R_intro_loops_logic_lists_dataframes_tables.R
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
-## COURSE NAME: Advanced Computational Methods for Social Media and Textual Data (2F)
-## University of Essex Summer School 2022
+## COURSE NAME: Advanced Computational Methods for Social Media and Textual Data (3B)
+## University of Essex Summer School 2023
 ##
 ## Date: 2023-08-08
 ##

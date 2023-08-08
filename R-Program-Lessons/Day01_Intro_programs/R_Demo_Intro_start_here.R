@@ -1,7 +1,7 @@
 ## R_Demo_Intro_start_here.R
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
-## COURSE NAME: Advanced Computational Methods for Social Media and Textual Data (2F)
+## COURSE NAME: Advanced Computational Methods for Social Media and Textual Data (3B)
 ## University of Essex Summer School 2023
 ##
 ## Date: 2023-08-07
@@ -56,10 +56,10 @@
 
 
 ##########################################################################
-## the work space and working directoy
+## the work space and working directory
 ##########################################################################
 
-## The working directoy is the location where R will look for outside datasets
+## The working directory is the location where R will look for outside datasets
 
 ## what is the current working directory?
 getwd()
@@ -169,10 +169,11 @@ object
 object <- sum(2,2)
 object
 
-## some_other_function <- function() ## note that function() is a function that creates a function() which we will talk about in a few weeks (week 6 and week 7)
+## some_other_function <- function() ## note that function() is a function that creates a function() which we will talk about in a few weeks 
 some_other_function <- function(){}
 some_other_function
 
+some_other_function()
 
 ##########################################################################
 ## more examples using the assignment operator
@@ -223,12 +224,13 @@ library(MASS)
 ## this function updates packages (we won't use this one too much)
 #update.packages()
 
+MASS::truehist()
 
 ##########################################################################
 ## save the workspace as a binary file
 ##########################################################################
 
-obj <- 3
+obj1 <- 3
 
 ## the save() function allows you to save individual objects that are currently loaded in memory
 save(obj1, file="Datasets/Myobject.Rdata")

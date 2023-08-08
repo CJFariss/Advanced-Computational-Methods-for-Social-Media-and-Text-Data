@@ -1,8 +1,8 @@
 ## R_Demo_Simulation_Learning_Estimate_Mean.R
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
-## COURSE NAME: Advanced Computational Methods for Social Media and Textual Data (2F)
-## University of Essex Summer School 2022
+## COURSE NAME: Advanced Computational Methods for Social Media and Textual Data (3B)
+## University of Essex Summer School 2023
 ##
 ## Date: 2023-08-08
 ##
@@ -10,6 +10,7 @@
 ## e-mail: cjf0006@gmail.com
 ## e-mail: cjfariss@umich.edu
 ##
+##########################################################################
 ## Introduction to tutorial:
 ##
 ## For this R tutorial, we will learn how:
