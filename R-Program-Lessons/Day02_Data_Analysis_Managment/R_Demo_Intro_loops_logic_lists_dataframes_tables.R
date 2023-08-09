@@ -63,7 +63,7 @@ pi != pi
 
 
 ## so far we have looked at simple statements. 
-## we can make these compond statments using the 
+## we can make these compound statements using the 
 ## AND operator & (also &&), 
 ## the OR operator | (also ||) 
 ## (there are more but let's not worry about these additional operators now)
@@ -151,7 +151,7 @@ if(1 == pi & pi == pi){
 }
 
 ## check the condition in the if statement, if that is TRUE print, else print the second statement
-## note that the else statement needs to be on the same line as the right sqiggly bracket }
+## note that the else statement needs to be on the same line as the right squiggly bracket }
 if(1 == pi & pi == pi){
   print("print this character string")
 } else{
@@ -217,13 +217,15 @@ social_media_data <- read.csv("Datasets/users-by-social-media-platform.csv", hea
 names(social_media_data)
 dim(social_media_data)
 
+head(social_media_data)
+
 subset(social_media_data, Entity=="Facebook")
 
 ## print only values for facebook using the subset function
 subset(social_media_data, Entity=="Facebook" & Year>=2016)
 
 ## print only values for entities that are NOT facebook using the subset function
-subset(social_media_data, Entity!="Facebook" & Year>=2016)
+subset(social_media_data, Entity!="Facebook" & Year>=2018)
 
 
 
@@ -263,6 +265,10 @@ for(i in seq(2,10,2)){
   print(i)
 }
 
+for(i in letters){
+  print(i)
+}
+
 
 ## print the indicator variable times the indicator variable each time the loop iterates
 for(i in 1:10){
@@ -287,7 +293,7 @@ for(i in letters){
   print(i)
 }
 
-## use unordered numbers
+## use un-ordered numbers
 for(i in c(1,4,800,5,3)){
   print(i)
 }
@@ -296,16 +302,28 @@ for(i in c(1,4,800,5,3)){
 
 
 ## declare the object in memory so we can access it later on
+rm(vec)
+vec
+vec[1] <- NA
+
+
 vec <- NA
 vec
+vec[1]
+
+vec[1] <- 3
 vec[1]
 
 vec <- c()
 vec
 vec[1]
 
+vec[1] <- 3
+vec[1]
 
 ## set i to the ith position of the vector each ith iteration the loop
+rm(vec)
+vec <- c()
 for(i in 1:10){
   vec[i] <- i
 }
@@ -470,18 +488,19 @@ apply(mat,2,mean)
 
 
 ## generic dataset (or make one for fun)
-survey_data <- data.frame(v1=c(0,0,0,0), v2=c(0,0,0,1), v3=c(0,0,1,1), v4=c(0,1,1,1), v5=c(1,1,1,1))
+survey_data <- data.frame(names=c("name1", "name2", "name3", "name4", "name5"), v1=c(0,0,0,0,1), v2=c(0,0,0,1,1), v3=c(0,0,1,1,1), v4=c(0,1,1,1,1), v5=c(1,1,1,1,0))
 survey_data
 
 
 ## we can add extra arguments to apply
 ## note that any additional arguments that we add in the apply() function are used for and in reference to the function we specify for the FUN argument in apply()
 ## since we are using the sum() function, we can use ?sum to find the additional arguments for addressing missing values
+apply(survey_data, MARGIN=1, FUN=sum, na.rm=T)
 apply(survey_data[,-1], MARGIN=1, FUN=sum, na.rm=T)
 
 sum(c(1,2,3))
 sum(c(1,2,3,NA))
-sum(c(1,2,3,NA), na.rm=T)
+sum(c(1,2,3,NA), na.rm=TRUE)
 
 ## use the above function to add a new column to our dataframe
 survey_data$subject_sums <- apply(survey_data[,-1], MARGIN=1, FUN=sum, na.rm=T)
@@ -496,7 +515,7 @@ table(survey_data$subject_sums)
 barplot(table(survey_data$subject_sums))
 
 ## use the new count data to examine specific cases with subset() function and logical statements
-subset(survey_data, subject_sums>=7)
+subset(survey_data, subject_sums>=3)
 
 
 ##########################################################################
@@ -510,6 +529,8 @@ tabs <- xtabs(monthly_active_users ~ Entity + Year, data= social_media_data)
 
 ## tabs is a table
 tabs
+
+xtabs( ~ Entity + Year, data= social_media_data)
 
 ## we can take the average across the rows of the table using tapply()
 
@@ -563,7 +584,7 @@ sum((1:6 - mean(1:6))^2 * (1/6))
 n_sims <- 2000
 
 ## number of samples to roll each iteration
-n_samples <- 10
+n_samples <- 4
 
 ## create two objects to hold the calculated mean and variance from each simulated sample
 sim_mean_values <- c()
