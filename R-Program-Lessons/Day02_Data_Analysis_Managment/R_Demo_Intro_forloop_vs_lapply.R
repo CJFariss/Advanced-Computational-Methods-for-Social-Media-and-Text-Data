@@ -16,7 +16,7 @@
 
 1:10
 
-lenght(1:10)
+length(1:10)
 
 
 ## for loop version

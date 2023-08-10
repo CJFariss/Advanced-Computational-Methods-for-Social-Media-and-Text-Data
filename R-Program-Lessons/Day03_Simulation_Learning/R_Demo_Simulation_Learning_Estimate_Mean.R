@@ -4,7 +4,7 @@
 ## COURSE NAME: Advanced Computational Methods for Social Media and Textual Data (3B)
 ## University of Essex Summer School 2023
 ##
-## Date: 2022-08-28
+## Date: 2023-08-09
 ##
 ## Please e-mail me if you find any errors or have and suggestions (either email is fine)
 ## e-mail: cjf0006@gmail.com
@@ -51,10 +51,12 @@ normal_density(data=x, mu=1, sigma=1)
 normal_density(data=x, mu=2, sigma=1)
 normal_density(data=x, mu=3, sigma=1)
 normal_density(data=x, mu=4, sigma=1)
+normal_density(data=x, mu=8, sigma=1)
 normal_density(data=x, mu=100, sigma=1)
 
 ## evaluate the sum of the log-likelihood when we guess that mu is 2
 mu_hat <- 2
+sigma<-1
 sum(log(1/(sigma*sqrt(2*pi)) * exp(-(x - mu_hat)^2/2*sigma^2)))
 
 sum(log(normal_density(data=x, mu=mu_hat, sigma=1)))
@@ -90,7 +92,7 @@ for(i in 1:length(MU)){
 }
 par(mfrow=c(1,1))
 plot(MU, dens)
-
+abline(v=3, col=2)
 ## what is the best mu_hat? Is this average of the vector of data?
 
 ##########################################################################

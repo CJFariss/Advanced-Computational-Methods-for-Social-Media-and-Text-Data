@@ -4,7 +4,7 @@
 ## COURSE NAME: Advanced Computational Methods for Social Media and Textual Data (3B)
 ## University of Essex Summer School 2023
 ##
-## Date: 2022-08-28
+## Date: 2023-08-08
 ##
 ## Please e-mail me if you find any errors or have and suggestions (either email is fine)
 ## e-mail: cjf0006@gmail.com

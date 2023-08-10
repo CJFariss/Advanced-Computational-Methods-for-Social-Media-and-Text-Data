@@ -4,7 +4,7 @@
 ## COURSE NAME: Advanced Computational Methods for Social Media and Textual Data (3B)
 ## University of Essex Summer School 2023
 ##
-## Date: 2022-08-28
+## Date: 2023-08-09
 ##
 ## Please e-mail me if you find any errors or have and suggestions (either email is fine)
 ## e-mail: cjf0006@gmail.com
@@ -14,16 +14,6 @@
 ## Introduction to tutorial:
 ##
 ## R_DSIS_week11_linear_model_estimation.R
-##########################################################################
-## INSTRUCTOR: Christopher Fariss
-## COURSE NAME: Data Science for International Studies (DSIS)
-## University of Michigan, Winter 2022
-##
-## Week 11
-##
-## Please e-mail me if you find any errors or have and suggestions (either email is fine)
-## e-mail: cjf0006@gmail.com
-## e-mail: cjfariss@umich.edu
 ##########################################################################
 ## Introduction to tutorial:
 ##
@@ -35,7 +25,7 @@
 ## (4) Matrix algebra
 ## (5) Find the best estimates using a user defined function which is passed to the optim function
 ## (6) Visualize the results using the contour plot function from the graphics library
-## (7) Simulate the model where the independent variable x is continous and binary
+## (7) Simulate the model where the independent variable x is continuous and binary
 ##
 ##########################################################################
 

@@ -76,6 +76,7 @@ s
 
 ## print the first element (this is a list): AVOID this 
 s[1]
+s[2]
 
 ## print the first element of the list (this a numeric scalar in a list)
 s[[1]]
@@ -115,6 +116,9 @@ v_vec
 
 is.vector(v_vec)
 is.list(v_vec)
+is.numeric(v_vec)
+is.character(v_vec)
+is.logical(v_vec)
 
 ## create a list of length 1 that contains 1 vector of length 5
 v_list <- list(c(1, 2, 3, 4, 5))
@@ -218,6 +222,8 @@ dat$year
 dat$stop_and_frisks
 
 dat$year
+
+dev.off()
 
 ## make the same plot with several additional arguments using the new dataframe we created
 plot(dat$year, dat$stop_and_frisks,
