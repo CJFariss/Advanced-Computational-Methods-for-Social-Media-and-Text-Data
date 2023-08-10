@@ -69,6 +69,7 @@ for(i in 1:samples_r){
 }
 mean(x_r)
 sd(x_r)
+MASS::truehist(x_r)
 
 x_r <- lapply(1:samples_r, function(i){
     x_r <- x[sample(1:length(x),size=sim_n,replace=TRUE)]
@@ -132,6 +133,7 @@ median(x)
 
 
 ## bootstrap estimate
+MASS::truehist(unlist(x_r), main="bootstrapped medians")
 mean(unlist(x_r))
 sd(unlist(x_r))
 
@@ -167,6 +169,6 @@ sum(x)
 ## bootstrap estimate
 mean(unlist(x_r))
 sd(unlist(x_r))
-
+MASS::truehist(unlist(x_r))
 
 

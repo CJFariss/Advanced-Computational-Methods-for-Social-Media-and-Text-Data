@@ -12,7 +12,7 @@
 ##
 ##########################################################################
 ##
-## Goal: Improve the estimation of uncertainty assoicated with one or more model parameters by fully approximating the posterior distribution of every parameter contained within a model.
+## Goal: Improve the estimation of uncertainty associated with one or more model parameters by fully approximating the posterior distribution of every parameter contained within a model.
 ##
 ##########################################################################
 ## Introduction to tutorial:

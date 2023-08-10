@@ -45,6 +45,8 @@ library(mvtnorm)
 n <- 50
 x1 <- rnorm(n,0,1)
 
+MASS::truehist(x1)
+
 ## make design matrix
 X <- cbind(1, x1)
 
@@ -54,7 +56,7 @@ k <- ncol(X)
 
 # select true population parameters
 alpha <- 1.250000
-beta <- 2.500000
+beta <- -2.500000
 
 # generate y with error
 error_term <- rnorm(n)
@@ -64,8 +66,10 @@ y <- alpha * X[,1] + beta * X[,2] + error_term
 
 summary(y)
 
+MASS::truehist(y)
+
 ## plot the x1 and y variable in 2D euclidean space
-par(mfrow=c(1,1))
+par(mfrow=c(1,1), mar=c(4,4,.5,.5))
 plot(x1, y)
 abline(a=alpha, b=beta, col=2)
 
@@ -101,7 +105,7 @@ for(i in 1:length(alpha.hat)){
     }
 }
 
-## find the coordinates from the matrix where the minimum of the sum of square residulas resides
+## find the coordinates from the matrix where the minimum of the sum of square residuals resides
 coordinates <- which(sumsquare == sumsquare[-sumsquare==min(-sumsquare)], arr.ind = TRUE)
 coordinates
 
@@ -124,7 +128,7 @@ ols.func <- function(par, X, iterate=TRUE){
     alpha.hat <- par[1]
     beta.hat <- par[2]
     y.hat <- alpha.hat + beta.hat * X[,2]
-    out <- -sum((y-y.hat)^2)
+    #out <- -sum((y-y.hat)^2)
     out <- sum(log(dnorm(y, mean=y.hat, sd=1)))
     
     if(iterate==TRUE){
@@ -137,10 +141,10 @@ ols.func <- function(par, X, iterate=TRUE){
 }
 
 ## pass function to optim with initial values
-optim.out <- optim(par = c(0,0), ols.func, X=X, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
+optim.out <- optim(par = c(0,0), fn = ols.func, X=X, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
 optim.out
 
-## estiamte additional quantities of interest
+## estimate additional quantities of interest
 se <- sqrt(diag(solve(-optim.out$hessian))) #calculate standard errors
 VCV <- solve(-optim.out$hessian) #compute variance-covariance matrix
 se
@@ -155,35 +159,35 @@ eval <- array(dim=c(1500,4))
 iter <- 1
 optim.out <- optim(par = c(-2,-2), ols.func, X=X, method="Nelder-Mead", control=list(fnscale = -1), hessian = TRUE)
 contour(alpha.hat,beta.hat,log(-sumsquare), xlab=expression(hat(alpha)), ylab=expression(hat(beta)), cex.lab=1.5)
-lines(eval[1:iter,1], eval[1:iter,2], col="purple", lwd=4)
+lines(eval[1:iter,1], eval[1:iter,2], col="purple", lwd=.5)
 optim.out$par
 iter
 
 eval <- array(dim=c(1500,4))
 iter <- 1
 optim.out <- optim(par = c(0,0), ols.func, X=X, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
-lines(eval[1:iter,1], eval[1:iter,2], col=2, lwd=4)
+lines(eval[1:iter,1], eval[1:iter,2], col=2, lwd=.5)
 optim.out$par
 iter
 
 eval <- array(dim=c(1500,4))
 iter <- 1
 optim.out <- optim(par = c(0,0), ols.func, X=X, method="CG", control=list(fnscale = -1), hessian = TRUE)
-lines(eval[1:iter,1], eval[1:iter,2], col=3, lwd=4)
+lines(eval[1:iter,1], eval[1:iter,2], col=3, lwd=.5)
 optim.out$par
 iter
 
 eval <- array(dim=c(1500,4))
 iter <- 1
 optim.out <- optim(par = c(0,0), ols.func, X=X, method="L-BFGS-B", control=list(fnscale = -1), hessian = TRUE)
-lines(eval[1:iter,1], eval[1:iter,2], col=4, lwd=4)
+lines(eval[1:iter,1], eval[1:iter,2], col=4, lwd=.5)
 optim.out$par
 iter
 
 eval <- array(dim=c(20000,4))
 iter <- 1
 optim.out <- optim(par = c(0,0), ols.func, X=X, method="SANN", control=list(fnscale = -1), hessian = TRUE)
-lines(eval[1:iter,1], eval[1:iter,2], col=5, lwd=4)
+lines(eval[1:iter,1], eval[1:iter,2], col=5, lwd=.5)
 optim.out$par
 iter
 
@@ -199,6 +203,7 @@ iter
 ## generate simulated vales
 n <- 50
 x1 <- rbinom(n,size=1,.5)
+x1
 
 ## make design matrix
 X <- cbind(1, x1)
@@ -238,10 +243,10 @@ beta_estimate
 ## what is the beta estimate here? It is also the difference in proportion of y when x==1 and x==0
 mean(y[x1==1]) - mean(y[x1==0])
 
-## this is the proportion of y when x==1
+## this is the average of y when x==1
 mean(y[x1==1])
 
-## this is the intercent  (the proportion of y when x==0)
+## this is the intercept  (the proportion of y when x==0)
 mean(y[x1==0])
 
 

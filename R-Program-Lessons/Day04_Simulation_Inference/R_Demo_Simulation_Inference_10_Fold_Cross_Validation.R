@@ -1,7 +1,7 @@
 #### R_Demo_Simulation_Inference_10_Fold_Cross_Validation.R
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
-## COURSE NAME: Advanced Computational Methods for Social Media and Textual Data (2F)
+## COURSE NAME: Advanced Computational Methods for Social Media and Textual Data (3B)
 ## University of Essex Summer School 2023
 ##
 ## Date: 2023-08-09
@@ -59,6 +59,7 @@ dat <- data.frame(y, x, folds)
 dat$y.hat0 <- NA
 dat$y.hat1 <- NA
 dat$y.hat2 <- NA
+dat$y.hat3 <- NA
 
 #test <- matrix(NA, nrow=k, ncol=2)
 
@@ -86,6 +87,13 @@ for(i in 1:k){
     y.hat2 <- as.numeric(pred2)
     
     dat$y.hat2[dat$fold==i] <- y.hat2
+
+    ## fit a linear model with a squared term and cubic term
+    fit2 <- lm(y ~ x + I(x^2) + I(x^3), data=subset(dat, folds!=i))
+    pred2 <- predict(fit2, newdata=subset(dat, folds==i))
+    y.hat3 <- as.numeric(pred2)
+    
+    dat$y.hat3[dat$fold==i] <- y.hat3
     
     print(summary(dat))
 }
@@ -99,7 +107,10 @@ rmse.fit1
 rmse.fit2 <- sqrt(mean((dat$y.hat2-dat$y)^2))
 rmse.fit2
 
-c(rmse.fit0, rmse.fit1, rmse.fit2)
+rmse.fit3 <- sqrt(mean((dat$y.hat3-dat$y)^2))
+rmse.fit3
+
+c(rmse.fit0, rmse.fit1, rmse.fit2, rmse.fit3)
 
 
 cor.fit0 <- cor(dat$y.hat0, dat$y, method="spearman")
@@ -111,7 +122,13 @@ cor.fit1
 cor.fit2 <- cor(dat$y.hat2, dat$y, method="spearman")
 cor.fit2
 
-c(cor.fit0, cor.fit1, cor.fit2)
+cor.fit3 <- cor(dat$y.hat3, dat$y, method="spearman")
+cor.fit3
+
+c(cor.fit0, cor.fit1, cor.fit2, cor.fit3)
+
+
+
 
 
 

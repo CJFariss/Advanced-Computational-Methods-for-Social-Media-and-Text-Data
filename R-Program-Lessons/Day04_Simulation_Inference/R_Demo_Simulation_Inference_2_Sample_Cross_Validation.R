@@ -61,6 +61,24 @@ folds <- sample(rep(1:2, n/2), n, replace=FALSE)
 dat <- data.frame(y, x, folds)
 
 
+## Model 0: fit a linear model
+fit <- lm(y ~ 1, data=subset(dat, folds==1))
+pred <- predict(fit, newdata=subset(dat, folds==2))
+y.hat.fold2 <- as.numeric(pred)
+
+fit <- lm(y ~ 1, data=subset(dat, folds==2))
+pred <- predict(fit, newdata=subset(dat, folds==1))
+y.hat.fold1 <- as.numeric(pred)
+
+dat$y.hat[dat$fold==2] <- y.hat.fold2
+dat$y.hat[dat$fold==1] <- y.hat.fold1
+
+summary(dat)
+
+rmse <- sqrt(mean((dat$y.hat-dat$y)^2))
+rmse
+
+
 ## Model 1: fit a linear model
 fit <- lm(y ~ x, data=subset(dat, folds==1))
 pred <- predict(fit, newdata=subset(dat, folds==2))
@@ -93,6 +111,22 @@ dat$y.hat[dat$fold==1] <- y.hat.fold1
 
 rmse <- sqrt(mean((dat$y.hat-dat$y)^2))
 rmse
+
+## Model 3: fit a linear model with a squared term
+fit <- lm(y ~ x + I(x^2) + I(x^3), data=subset(dat, folds==1))
+pred <- predict(fit, newdata=subset(dat, folds==2))
+y.hat.fold2 <- as.numeric(pred)
+
+fit <- lm(y ~ x + I(x^2) + I(x^3), data=subset(dat, folds==2))
+pred <- predict(fit, newdata=subset(dat, folds==1))
+y.hat.fold1 <- as.numeric(pred)
+
+dat$y.hat[dat$fold==2] <- y.hat.fold2
+dat$y.hat[dat$fold==1] <- y.hat.fold1
+
+rmse <- sqrt(mean((dat$y.hat-dat$y)^2))
+rmse
+
 
 
 ## more compact version of Model 1 above using a for loop
