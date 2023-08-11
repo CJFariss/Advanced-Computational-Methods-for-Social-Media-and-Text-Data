@@ -1,0 +1,243 @@
+subject,name,y1,y2,y3,y4,y5,y6,y7,y8,y9,y10
+1,Fariss,1,Picard,Reginald Barclay,Cloaking Device,1,1,I,Gates Mcfadden,1,1
+2,,0,Picard,Data,Omega Device,1,0,III,Brent Spiner,0,1
+3,,0,Picard,Geordi Laforge,Cloaking Device,1,0,III,Marina Sirtis,0,1
+4,,1,Picard,Data,Cloaking Device,1,1,I,Gates Mcfadden,1,1
+5,,0,Picard,Data,Neutron Device,0,0,III,Marina Sirtis,0,1
+6,,0,Picard,Jack O'neill,Measurement Device,0,0,III,Levar Burton,0,1
+7,,0,Picard,Data,Cloaking Device,0,0,I,Brent Spiner,0,1
+8,,0,Archer,Geordi Laforge,Nuclear Device,0,1,III,Gates Mcfadden,0,0
+9,,0,Sisko,Guinan,Omega Device,0,0,V,Jonathan Frakes,0,0
+10,,0,Picard,Data,Cloaking Device,0,0,II,Levar Burton,0,0
+11,,0,Picard,Data,Cloaking Device,1,1,III,Gates Mcfadden,0,0
+12,,0,Picard,Data,Neutron Device,1,1,V,Marina Sirtis,0,1
+13,,0,Archer,Reginald Barclay,Cloaking Device,1,1,III,Gates Mcfadden,0,1
+14,,0,Picard,Geordi Laforge,Omega Device,0,0,V,Marina Sirtis,0,0
+15,,1,Picard,Reginald Barclay,Cloaking Device,1,0,VII,Gates Mcfadden,0,0
+16,,1,Picard,Geordi Laforge,Nuclear Device,1,0,V,Gates Mcfadden,1,1
+17,,0,Picard,Data,Cloaking Device,1,1,I,Gates Mcfadden,1,1
+18,,0,Kirk,Data,Omega Device,0,0,I,Levar Burton,0,1
+19,,0,Picard,Data,Omega Device,1,0,II,Brent Spiner,0,1
+20,,0,Picard,Geordi Laforge,Neutron Device,0,0,V,Levar Burton,0,0
+21,,1,Archer,Reginald Barclay,Cloaking Device,1,1,V,Gates Mcfadden,1,1
+22,,1,Picard,Data,Cloaking Device,0,1,III,Gates Mcfadden,0,1
+23,,1,Picard,Data,Nuclear Device,1,0,III,Levar Burton,0,1
+24,,0,Janeway,Jack O'neill,Measurement Device,1,0,V,Marina Sirtis,0,1
+25,,0,Kirk,Data,Nuclear Device,0,0,III,Marina Sirtis,0,1
+26,,0,Kirk,Geordi Laforge,Measurement Device,0,1,III,Brent Spiner,0,0
+27,,0,Picard,Data,Cloaking Device,0,0,III,Gates Mcfadden,0,1
+28,,0,Picard,Data,Cloaking Device,0,1,V,Brent Spiner,0,1
+29,,0,Kirk,Geordi Laforge,Omega Device,0,0,II,Marina Sirtis,0,0
+30,,0,Picard,Data,Cloaking Device,0,0,III,Gates Mcfadden,0,1
+31,,0,Picard,Data,Cloaking Device,0,0,III,Marina Sirtis,0,1
+32,,0,Picard,Geordi Laforge,,0,1,V,Gates Mcfadden,0,1
+33,,0,Picard,Data,Neutron Device,1,0,VII,Marina Sirtis,0,1
+34,,0,Janeway,Data,Cloaking Device,0,0,V,Brent Spiner,0,0
+35,,0,Picard,,,0,0,I,,0,0
+36,,0,Kirk,Geordi Laforge,Neutron Device,0,0,III,,0,0
+37,,0,Kirk,Jack O'neill,Omega Device,0,0,III,Brent Spiner,0,0
+38,,0,Kirk,Data,Neutron Device,0,1,VII,Levar Burton,0,0
+39,,0,Kirk,Geordi Laforge,Measurement Device,0,0,V,Levar Burton,0,0
+40,,0,Kirk,Data,Neutron Device,0,0,III,Gates Mcfadden,0,0
+41,,0,Kirk,Jack O'neill,Neutron Device,1,0,III,Brent Spiner,0,0
+42,,0,Picard,Data,Cloaking Device,1,0,VII,Marina Sirtis,0,1
+43,,0,Kirk,Jack O'neill,Neutron Device,0,0,II,Gates Mcfadden,0,0
+44,,0,Archer,Jack O'neill,Neutron Device,0,0,III,Levar Burton,0,0
+45,,0,Archer,Data,Neutron Device,0,0,V,Gates Mcfadden,0,0
+46,,0,Archer,Jack O'neill,Measurement Device,0,0,VII,Jonathan Frakes,0,0
+47,,0,Picard,Geordi Laforge,Nuclear Device,0,0,V,Gates Mcfadden,0,0
+48,,0,Picard,Data,Neutron Device,0,0,III,Marina Sirtis,0,0
+49,,0,Picard,Data,Neutron Device,0,0,III,Jonathan Frakes,0,0
+50,,0,,,,1,0,,,0,0
+51,,0,Picard,Data,Cloaking Device,1,0,III,Marina Sirtis,0,0
+52,,0,Kirk,Data,Omega Device,0,0,III,Marina Sirtis,0,1
+53,,0,Picard,Data,Omega Device,1,0,V,Brent Spiner,0,1
+54,,0,,,,0,0,,,0,0
+55,,0,Archer,Data,Cloaking Device,1,1,I,Gates Mcfadden,0,1
+56,,0,Picard,Data,Cloaking Device,1,0,V,Gates Mcfadden,0,1
+57,,0,Kirk,Geordi Laforge,Cloaking Device,0,0,II,Gates Mcfadden,0,1
+58,,0,Kirk,Reginald Barclay,Nuclear Device,0,0,VII,Gates Mcfadden,0,0
+59,,0,Janeway,Jack O'neill,Omega Device,0,0,I,Gates Mcfadden,0,0
+60,,0,Archer,Data,Omega Device,0,0,III,Brent Spiner,0,0
+61,,0,Kirk,Data,Nuclear Device,0,0,III,Jonathan Frakes,0,0
+62,,0,Kirk,Geordi Laforge,Nuclear Device,0,0,III,Brent Spiner,0,0
+63,,0,Kirk,Data,Omega Device,0,0,V,Gates Mcfadden,0,0
+64,,0,Picard,Geordi Laforge,Cloaking Device,1,0,III,Jonathan Frakes,0,1
+65,,0,Archer,Data,Measurement Device,0,0,VII,Marina Sirtis,0,0
+66,,0,Janeway,Data,Neutron Device,0,1,III,Gates Mcfadden,0,0
+67,,0,Picard,Guinan,Neutron Device,0,0,III,Jonathan Frakes,0,0
+68,,0,Picard,Jack O'neill,Omega Device,0,0,III,Marina Sirtis,0,1
+69,,0,Janeway,Geordi Laforge,Cloaking Device,0,0,I,Gates Mcfadden,0,0
+70,,0,Picard,Data,Neutron Device,0,0,V,Brent Spiner,0,0
+71,,0,Picard,Reginald Barclay,Nuclear Device,0,0,I,Levar Burton,0,0
+72,,0,Kirk,Reginald Barclay,Omega Device,0,1,III,Jonathan Frakes,0,0
+73,,0,Picard,Data,Omega Device,1,0,VII,Marina Sirtis,0,1
+74,,0,Archer,Data,Omega Device,0,0,V,Marina Sirtis,0,1
+75,,1,Picard,Data,Omega Device,1,1,I,Gates Mcfadden,0,1
+76,,1,Picard,Data,Cloaking Device,1,0,V,Gates Mcfadden,0,1
+77,,0,Picard,Reginald Barclay,Cloaking Device,1,0,I,Gates Mcfadden,1,1
+78,,0,Janeway,Guinan,Cloaking Device,1,0,III,Marina Sirtis,0,1
+79,,1,Picard,Data,Cloaking Device,1,1,I,Gates Mcfadden,0,1
+80,,0,Kirk,Jack O'neill,Omega Device,0,0,III,Levar Burton,0,0
+81,,0,Janeway,Data,Omega Device,1,0,II,Levar Burton,0,1
+82,,0,Archer,Reginald Barclay,Omega Device,0,0,III,Brent Spiner,0,0
+83,,1,Picard,Reginald Barclay,Cloaking Device,1,1,III,Gates Mcfadden,0,1
+84,,0,Picard,Geordi Laforge,Cloaking Device,1,0,I,Gates Mcfadden,0,1
+85,,0,Kirk,Jack O'neill,Cloaking Device,0,0,III,Jonathan Frakes,0,0
+86,,0,Picard,Data,Cloaking Device,0,0,V,Gates Mcfadden,0,0
+87,,0,Sisko,Geordi Laforge,Omega Device,0,0,V,Jonathan Frakes,0,0
+88,,0,Picard,Data,Omega Device,0,0,III,Levar Burton,0,0
+89,,0,Kirk,Jack O'neill,Neutron Device,0,0,III,,0,0
+90,,0,Sisko,Geordi Laforge,Measurement Device,0,0,II,Brent Spiner,0,0
+91,,0,Picard,Data,Omega Device,0,0,III,Marina Sirtis,0,1
+92,,0,Kirk,Reginald Barclay,Omega Device,1,0,V,Gates Mcfadden,0,0
+93,,0,Kirk,Reginald Barclay,Cloaking Device,0,1,III,Gates Mcfadden,0,0
+94,,0,Kirk,Data,Nuclear Device,1,1,VII,Marina Sirtis,0,1
+95,,0,Kirk,Data,Cloaking Device,1,1,I,Marina Sirtis,0,1
+96,,0,Picard,Geordi Laforge,Neutron Device,0,0,I,Gates Mcfadden,0,1
+97,,0,Picard,Data,Cloaking Device,0,0,III,Jonathan Frakes,0,0
+98,,0,Janeway,Geordi Laforge,Nuclear Device,0,0,III,Levar Burton,0,0
+99,,0,Picard,Data,Nuclear Device,0,0,I,Brent Spiner,0,0
+100,,0,Kirk,Geordi Laforge,Neutron Device,0,0,V,Jonathan Frakes,0,0
+101,,0,Picard,Reginald Barclay,Omega Device,0,0,V,Levar Burton,0,0
+102,,0,Archer,Data,Omega Device,0,0,V,Marina Sirtis,0,1
+103,,0,Kirk,Data,Omega Device,0,0,III,Jonathan Frakes,0,0
+104,,0,Archer,Data,Cloaking Device,1,0,V,Gates Mcfadden,0,0
+105,,1,Kirk,Reginald Barclay,Cloaking Device,0,0,III,Gates Mcfadden,0,0
+106,,0,Picard,Data,Cloaking Device,1,1,II,Levar Burton,0,0
+107,,1,Picard,Jack O'neill,Cloaking Device,1,0,I,Gates Mcfadden,1,1
+108,,0,Kirk,Guinan,Measurement Device,0,0,III,Brent Spiner,0,1
+109,,0,Kirk,Data,Omega Device,0,1,III,Marina Sirtis,0,1
+110,,0,Picard,Reginald Barclay,Cloaking Device,0,0,II,Levar Burton,0,1
+111,,0,Kirk,Geordi Laforge,Cloaking Device,0,0,III,Marina Sirtis,0,0
+112,,0,,,,0,0,,,0,0
+113,,0,Kirk,Reginald Barclay,Neutron Device,0,1,III,Gates Mcfadden,0,0
+114,,0,Archer,Jack O'neill,Omega Device,0,0,III,Jonathan Frakes,0,0
+115,,0,Kirk,Reginald Barclay,Cloaking Device,0,0,III,Gates Mcfadden,0,0
+116,,0,Picard,Geordi Laforge,Cloaking Device,0,0,I,Levar Burton,0,0
+117,,0,Kirk,Reginald Barclay,Neutron Device,0,0,II,Gates Mcfadden,0,0
+118,,0,Kirk,Data,Cloaking Device,0,1,V,Marina Sirtis,0,0
+119,,0,Picard,Data,Neutron Device,1,0,III,Levar Burton,0,1
+120,,0,Sisko,Geordi Laforge,Cloaking Device,0,0,III,Brent Spiner,0,0
+121,,0,Kirk,Jack O'neill,Cloaking Device,0,0,II,Marina Sirtis,0,0
+122,,0,Kirk,Guinan,Neutron Device,0,0,II,Jonathan Frakes,0,0
+123,,0,Kirk,Data,Cloaking Device,0,0,III,Jonathan Frakes,0,1
+124,,0,Kirk,Guinan,Neutron Device,0,0,III,Brent Spiner,0,0
+125,,0,Kirk,Jack O'neill,Omega Device,0,0,I,Gates Mcfadden,0,0
+126,,0,Janeway,Data,Omega Device,0,1,III,Jonathan Frakes,0,0
+127,,0,Picard,Data,Cloaking Device,1,1,III,Levar Burton,0,0
+128,,0,Kirk,Data,Omega Device,1,0,V,Marina Sirtis,0,0
+129,,0,Kirk,Reginald Barclay,Neutron Device,0,0,V,Jonathan Frakes,0,0
+130,,0,Picard,Data,,0,0,VII,Levar Burton,0,0
+131,,0,Kirk,Data,Neutron Device,0,0,III,Gates Mcfadden,0,0
+132,,0,Kirk,Data,Cloaking Device,0,0,III,Levar Burton,0,0
+133,,0,Kirk,Data,Cloaking Device,0,0,III,Jonathan Frakes,0,0
+134,,0,Kirk,Jack O'neill,Neutron Device,0,0,V,Levar Burton,0,0
+135,,0,Kirk,Reginald Barclay,Omega Device,0,0,V,Gates Mcfadden,0,0
+136,,0,Sisko,Jack O'neill,Cloaking Device,0,0,V,Jonathan Frakes,0,0
+137,,0,Kirk,Data,Cloaking Device,0,0,V,Jonathan Frakes,0,0
+138,,1,Picard,Reginald Barclay,Cloaking Device,1,1,I,Gates Mcfadden,1,1
+139,,0,Picard,Data,Omega Device,0,1,III,Brent Spiner,0,0
+140,,0,Kirk,Reginald Barclay,Neutron Device,0,0,III,Brent Spiner,0,1
+141,,0,,,,0,0,,,0,0
+142,,0,Picard,Jack O'neill,Omega Device,1,1,V,Gates Mcfadden,0,1
+143,,1,Sisko,Guinan,Cloaking Device,1,1,III,Gates Mcfadden,0,0
+144,,0,Archer,Data,Omega Device,0,0,V,Levar Burton,0,0
+145,,0,Archer,Data,Cloaking Device,1,0,III,Marina Sirtis,0,1
+146,,1,Archer,Reginald Barclay,Cloaking Device,1,1,I,Gates Mcfadden,0,1
+147,,0,Kirk,Guinan,Cloaking Device,0,0,VII,Marina Sirtis,0,0
+148,,0,Kirk,Data,Omega Device,0,0,III,Gates Mcfadden,0,0
+149,,0,Picard,Geordi Laforge,Neutron Device,0,0,III,Levar Burton,0,0
+150,,0,Kirk,Jack O'neill,Omega Device,0,1,V,Gates Mcfadden,0,0
+151,,0,Archer,Jack O'neill,Measurement Device,0,0,II,Marina Sirtis,0,0
+152,,0,Picard,Data,Omega Device,0,0,III,Gates Mcfadden,0,0
+153,,0,Janeway,Jack O'neill,Cloaking Device,0,0,V,Jonathan Frakes,0,0
+154,,0,Kirk,Data,Cloaking Device,0,0,III,Brent Spiner,0,1
+155,,0,Archer,Reginald Barclay,Neutron Device,0,0,V,Jonathan Frakes,0,0
+156,,0,Picard,Geordi Laforge,Neutron Device,0,0,I,Levar Burton,0,0
+157,,0,Kirk,Reginald Barclay,Omega Device,1,0,V,Gates Mcfadden,0,1
+158,,0,,Data,Cloaking Device,1,1,,Gates Mcfadden,0,1
+159,,0,Kirk,Reginald Barclay,Cloaking Device,0,0,III,Marina Sirtis,0,1
+160,,0,Archer,Jack O'neill,Omega Device,0,0,VII,Gates Mcfadden,0,0
+161,,0,Kirk,Reginald Barclay,Omega Device,0,0,III,Brent Spiner,0,0
+162,,0,Picard,Data,Cloaking Device,0,0,V,Jonathan Frakes,0,0
+163,,0,Picard,,Cloaking Device,0,0,,,0,0
+164,,0,Janeway,Data,Cloaking Device,0,0,II,Gates Mcfadden,0,0
+165,,0,Kirk,Guinan,Neutron Device,0,0,V,Jonathan Frakes,0,0
+166,,0,Picard,Data,Cloaking Device,0,0,III,Gates Mcfadden,0,0
+167,,0,Kirk,Data,Cloaking Device,0,0,III,Levar Burton,0,0
+168,,0,Picard,Data,Cloaking Device,0,0,V,Brent Spiner,0,1
+169,,0,Archer,Reginald Barclay,Nuclear Device,0,0,III,Gates Mcfadden,0,0
+170,,0,Sisko,Data,Nuclear Device,0,0,II,Gates Mcfadden,0,0
+171,,0,Picard,Geordi Laforge,Cloaking Device,0,0,III,Levar Burton,0,1
+172,,0,Kirk,,,0,0,,,0,0
+173,,0,Sisko,Reginald Barclay,Omega Device,0,0,I,Marina Sirtis,0,0
+174,,0,,,,0,0,,,0,0
+175,,0,Kirk,Data,Neutron Device,0,0,III,Marina Sirtis,0,0
+176,,0,Picard,Data,Cloaking Device,1,0,III,Levar Burton,0,1
+177,,0,Kirk,Data,Cloaking Device,0,1,V,Levar Burton,0,1
+178,,0,Archer,Data,Omega Device,1,1,II,Brent Spiner,0,1
+179,,0,Kirk,Reginald Barclay,Omega Device,0,0,III,Marina Sirtis,0,0
+180,,0,Picard,Data,Nuclear Device,0,0,III,Brent Spiner,0,0
+181,,0,Kirk,Guinan,Neutron Device,0,0,V,Levar Burton,0,0
+182,,0,Kirk,Guinan,Omega Device,0,0,V,Brent Spiner,0,0
+183,,0,Picard,Guinan,Neutron Device,1,0,III,Gates Mcfadden,0,0
+184,,0,Kirk,Data,Neutron Device,0,0,VII,Gates Mcfadden,0,1
+185,,0,Kirk,Data,Omega Device,1,0,VII,Marina Sirtis,0,1
+186,,0,Kirk,Data,Measurement Device,0,0,VII,Levar Burton,0,0
+187,,1,Picard,Reginald Barclay,Cloaking Device,0,1,V,Gates Mcfadden,0,1
+188,,0,Archer,,Measurement Device,0,0,III,Brent Spiner,0,0
+189,,0,Picard,Data,Neutron Device,0,0,III,Marina Sirtis,0,1
+190,,0,Picard,Data,Omega Device,1,0,V,Marina Sirtis,0,1
+191,,0,Kirk,Jack O'neill,Nuclear Device,1,0,V,Jonathan Frakes,0,1
+192,,0,Picard,Data,Cloaking Device,0,0,III,Marina Sirtis,0,1
+193,,0,Kirk,Reginald Barclay,Omega Device,0,0,V,Gates Mcfadden,0,0
+194,,0,Janeway,Guinan,Measurement Device,0,0,VII,Brent Spiner,0,0
+195,,1,Kirk,Reginald Barclay,Omega Device,1,0,III,Levar Burton,1,1
+196,,0,Picard,Geordi Laforge,Neutron Device,0,0,II,Jonathan Frakes,0,0
+197,,0,Kirk,Guinan,Measurement Device,1,1,III,Marina Sirtis,0,0
+198,,0,Kirk,Jack O'neill,Neutron Device,0,0,V,Gates Mcfadden,0,1
+199,,0,Janeway,Geordi Laforge,Measurement Device,0,0,III,Marina Sirtis,0,1
+200,,0,Kirk,,,0,0,,,0,0
+201,,0,Picard,Data,Omega Device,1,0,V,Marina Sirtis,0,1
+202,,0,Kirk,Data,Cloaking Device,0,0,III,Marina Sirtis,0,1
+203,,0,Janeway,Geordi Laforge,Omega Device,0,0,V,Gates Mcfadden,0,0
+204,,0,Kirk,Jack O'neill,Nuclear Device,0,0,III,Jonathan Frakes,0,0
+205,,0,Kirk,Geordi Laforge,Cloaking Device,0,1,III,Jonathan Frakes,0,0
+206,,0,Kirk,Geordi Laforge,Omega Device,0,0,III,Levar Burton,0,1
+207,,0,Kirk,Jack O'neill,Neutron Device,0,0,III,Marina Sirtis,0,0
+208,,0,Kirk,Reginald Barclay,Neutron Device,0,0,III,Gates Mcfadden,0,0
+209,,0,Kirk,Reginald Barclay,Neutron Device,0,0,V,Brent Spiner,0,0
+210,,0,Kirk,Geordi Laforge,Neutron Device,0,1,III,Brent Spiner,0,0
+211,,0,Kirk,Reginald Barclay,Omega Device,0,0,II,Marina Sirtis,0,0
+212,,0,Kirk,Jack O'neill,Omega Device,0,1,III,Gates Mcfadden,0,0
+213,,0,Kirk,Guinan,Cloaking Device,0,1,III,Levar Burton,0,1
+214,,0,Kirk,Reginald Barclay,Measurement Device,0,0,II,Brent Spiner,0,0
+215,,0,Archer,Reginald Barclay,Omega Device,0,0,III,Jonathan Frakes,0,0
+216,,0,Janeway,Data,Omega Device,0,0,III,Gates Mcfadden,0,0
+217,,0,Picard,Guinan,Cloaking Device,0,0,III,Jonathan Frakes,0,0
+218,,0,Kirk,Jack O'neill,Cloaking Device,0,0,III,Marina Sirtis,0,0
+219,,0,Sisko,Geordi Laforge,Omega Device,0,1,V,Gates Mcfadden,0,0
+220,,0,Picard,Data,Cloaking Device,1,0,III,Brent Spiner,0,0
+221,,0,Picard,Data,Cloaking Device,0,0,V,Gates Mcfadden,0,0
+222,,0,Kirk,Data,Cloaking Device,1,1,VII,Marina Sirtis,0,0
+223,,0,Picard,Data,Neutron Device,0,0,III,Jonathan Frakes,1,0
+224,,0,Kirk,Reginald Barclay,Neutron Device,0,0,II,Gates Mcfadden,0,0
+225,,0,Kirk,Geordi Laforge,Cloaking Device,0,0,V,Levar Burton,0,1
+226,,0,Kirk,,,1,0,,,0,1
+227,,0,Kirk,Jack O'neill,Omega Device,0,0,III,Marina Sirtis,0,0
+228,,0,Picard,Data,Cloaking Device,0,1,III,Levar Burton,0,1
+229,,0,Kirk,Data,Neutron Device,0,0,III,Marina Sirtis,0,0
+230,,0,,,,0,0,,,0,0
+231,,0,Picard,Guinan,,0,0,III,,0,0
+232,,0,Picard,Reginald Barclay,Cloaking Device,1,0,II,Gates Mcfadden,0,0
+233,,0,,,,0,0,,,0,0
+234,,0,,,,0,0,,,0,0
+235,Vuong Chu,0,Janeway,Data,Nuclear Device,0,0,III,Jonathan Frakes,0,0
+236,Brian,0,Picard,Data,Omega Device,1,0,III,Levar Burton,0,1
+237,Iris,0,Kirk,Data,Omega Device,0,1,V,Gates Mcfadden,0,0
+238,Stefan,0,Archer,Data,Measurement Device,0,0,II,Jonathan Frakes,0,0
+239,Sophie,0,Sisko,Data,Omega Device,0,1,III,Gates Mcfadden,0,0
+240,Claire,0,Kirk,Data,Cloaking Device,0,0,I,Jonathan Frakes,0,0
+241,Weitian,1,Picard,Data,Cloaking Device,1,1,I,Gates Mcfadden,1,1
+242,Gao,0,Kirk,Geordi Laforge,Cloaking Device,0,0,III,Marina Sirtis,0,0
