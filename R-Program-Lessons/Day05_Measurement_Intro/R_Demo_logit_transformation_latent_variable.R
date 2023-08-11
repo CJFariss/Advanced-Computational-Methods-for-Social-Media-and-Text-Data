@@ -77,7 +77,7 @@ for(j in 1:length(beta)){
     ## set intercepts * an expansion factor, which is the item discrimination from above
     ## values correspond exactly to the position along the standard normal x variable
     ## specifically, these are the position along x at which point at which Pr(y=1)=.5
-    alpha <- beta[j]*c(-2,0,2)
+    alpha <- beta[j]*c(-2,-.5,2)
     
     # linear terms of the model
     # transform the linear xb terms using the logit function into a probability
@@ -90,7 +90,7 @@ for(j in 1:length(beta)){
     
     for(i in 1:length(alpha)){
         ## graph theta values along the the x-axis
-        ## x values are projected onto the probablity of y using the inverse logit function of xb
+        ## x values are projected onto the probability of y using the inverse logit function of xb
         plot(theta, p[,i], xlim=c(-4.0,4.0), ylim=c(0,1), xaxt="n", xlab="", type="l", lwd=2, col=grey(.5), ylab="")
         if(j==3)mtext(side=1, expression(theta), cex=1.25, line=3)
         if(i==1)mtext(side=2, expression("Probability Y=1"), cex=1.25, line=3)

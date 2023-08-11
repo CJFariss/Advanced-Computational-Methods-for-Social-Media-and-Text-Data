@@ -38,8 +38,8 @@ model <- "
     }
     model {
         // priors (these are variances not precision)
-        alpha ~ normal(0,10);
-        beta ~ normal(0,10);
+        //alpha ~ normal(0,10);
+        //beta ~ normal(0,10);
     
         // likelihood (link data to some combination of parameters and more data)
         y ~ bernoulli_logit(alpha + beta * x);

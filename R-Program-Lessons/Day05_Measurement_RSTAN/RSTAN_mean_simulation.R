@@ -40,7 +40,7 @@ model <- "
         // by default the priors on the parameters are flat unless we provide more information (see the other examples)
         // likelihood (link data to some combination of parameters and more data)
         
-        mu ~ normal(0,1);
+        mu ~ normal(0,.1);
         
         for(i in 1:n){
             y[i] ~ normal(mu, sigma);

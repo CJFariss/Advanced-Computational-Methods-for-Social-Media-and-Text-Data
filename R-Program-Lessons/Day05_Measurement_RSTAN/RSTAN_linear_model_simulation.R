@@ -39,8 +39,8 @@ model <- "
     }
     model {
         // priors (these are variances not precision)
-        alpha ~ normal(0,10);
-        beta ~ normal(0,10);
+        //alpha ~ normal(0,10);
+        //beta ~ normal(0,10);
 
         // likelihood (link data to some combination of parameters and more data)
         for(i in 1:n){
@@ -105,6 +105,15 @@ lapply(output, sd)[1:3]
 ## create a matrix using some of the named slots in the list
 model_parameters <- as.matrix(fit, pars = c("alpha", "beta", "sigma"))
 model_predictions <- as.matrix(fit, pars = "y_predict")
+
+dim(model_parameters)
+names(model_parameters)
+
+plot(model_parameters[1:500,2], type="l", col=1)
+lines(model_parameters[501:1000,2], type="l", col=2)
+lines(model_parameters[1001:1500,2], type="l", col=3)
+lines(model_parameters[1501:2000,2], type="l", col=4)
+
 
 ## check the dimensions (they should be the same)
 dim(model_predictions)

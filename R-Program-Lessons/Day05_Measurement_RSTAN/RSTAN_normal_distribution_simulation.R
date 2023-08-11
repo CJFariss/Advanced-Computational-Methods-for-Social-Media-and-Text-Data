@@ -64,14 +64,19 @@ fit
 lapply(output, mean)
 lapply(output, sd)
 
+length(output$mu)
+
 ## create a matrix using some of the named slots in the list
 model_parameters <- as.matrix(fit, pars = c("mu"))
+
+dim(model_parameters)
 
 ## check the dimensions (they should be the same)
 length(output$mu)
 
 ## make a nice plot
-#par(mfrow=c(2,2))
+par(mfrow=c(1,1))
 truehist(output$mu)
 
+#plot(fit[[1]]$sim$permutation[[3]])
 
