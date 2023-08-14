@@ -28,16 +28,16 @@
 ## g is for get
 
 ## grepl() is logical function that returns TRUE if the first character argument is contained the second character argument
-grepl("a", c("abc", "def"))
-grepl("b", "abc")
-grepl("c", "abc")
-grepl("d", "abc")
+grepl(pattern="a", c("abc", "def"))
+grepl(pattern="b", "abc")
+grepl(pattern="c", "abc")
+grepl(pattern="d", "abc")
 
 ## grep() function that returns the coordinate position of the vector in the second character argumnet
-grep("a", c("a", "b", "c", "d", "e", "f", "g"))
-grep("b", c("a", "b", "c", "d", "e", "f", "g"))
-grep("c", c("a", "b", "c", "d", "e", "f", "g"))
-grep("d", c("a", "b", "c", "d", "e", "f", "g"))
+grep(pattern="a", c("a", "b", "c", "d", "e", "f", "g"))
+grep(pattern="b", c("a", "b", "c", "d", "e", "f", "g"))
+grep(pattern="c", c("a", "b", "c", "d", "e", "f", "g"))
+grep(pattern="d", c("a", "b", "c", "d", "e", "f", "g"))
 
 ## sub() and gsub() look for a character string called the pattern in a vector of characters (third argument x) and replaced it was the character string in the second argument
 gsub(pattern="a", "x", c("abc", "def"))
@@ -59,11 +59,16 @@ sub(pattern="a", "", "abcabc")
 sub(pattern="b", "", "abcabc")
 sub(pattern="c", "", "abcabc")
 
-## gregexp()
+## regexpr()
+regexpr(pattern="a", c("abcabc", "a", "b"))
+
+## gregexpr() tells us the position(s) of the pattern in each element of the pattern (i.e., like the which() function)
+gregexpr(pattern="a", c("abcabc", "a", "b"))
+
+## see ?grep for many more examples for each of the regular expression functions shown above
 
 ## read in fake tweeter data that I made up
-readLines("Datasets/SIMpoliticalTweets.txt")[1]
-tweets <- readLines("Datasets/SIMpoliticalTweets.txt", n=-1)
+tweets <- readLines("SIMpoliticalTweets.txt", n=-1)
 
 ## print the tweets to screen
 tweets
@@ -82,14 +87,14 @@ obama <- as.numeric(grepl("obama", tweets))
 love <- as.numeric(grepl("love", tweets))
 hate <- as.numeric(grepl("hate", tweets))
 
+## print out the vectors
 obama
 love
 hate
 
-## tabulate the occurance of obama and one of the two emotional expressions
+## tabulate the occurrence of the term "obama" and one of the two emotional expressions
 table(obama,love)
 table(obama,hate)
-
 
 ## look at the output as columns
 cbind(obama,love,hate)
@@ -99,15 +104,23 @@ tweet_data <- as.data.frame(cbind(obama,love,hate))
 tweet_data
 
 ## write the data frame as a csv file
-write.csv(tweet_data, "Datasets/tweet_data.csv")
+write.csv(tweet_data, "tweet_data.csv")
 
 ## save the tweet data as an R object
-save(tweet_data, file="Datasets/tweet_data.Rdata")
+save(tweet_data, file="tweet_data")
 
 ## the tweet_data object is a document by term dataset made up of a subset of the unique terms that are in the original data file we loaded into R
 tweet_data
 
-## let's make a DTM (document-by-term-matrix) will all the unique terms
+##########################################################################
+## Let's make a DTM (document-by-term-matrix) will all the unique terms.
+##
+## Definition: 
+##
+## For the DTM, we let i = 1, ..., N index documents and w = 1, ..., W index the unique terms in the collection of documents. 
+## For each of the i documents, we determine the frequency of each of the unique $w$ words. 
+## Each of the D_iw entries in a DTM represents  the number of times the w-th word appears in the i-th document.
+##########################################################################
 
 ## read in fake tweeter data that I made up
 tweets <- readLines("Datasets/SIMpoliticalTweets.txt", n=-1)
@@ -115,9 +128,16 @@ tweets <- readLines("Datasets/SIMpoliticalTweets.txt", n=-1)
 ## print the tweets to screen
 tweets
 
-## strsplit() is a function that takes a character vector and splits it into a vector whenever it finds a specific character. We will take advantage of the fact that english used the space " " to denote when one words ends and a new word begins.
+##########################################################################
+## Definition: 
+##
+## To "string split" a character vector, we take a single character values (it could be a word, paragraph, or entire document) and split it into new values contained in a character vector
+## 
+## strsplit() is a function that takes a character vector and splits it into a vector whenever it finds a specific character. 
+## We will take advantage of the fact that English used the space " " to denote when one words ends and a new word begins.
+##########################################################################
 
-## slits every tweet into a vector of letters contained in a list (each element of the list is the original tweet)
+## strsplit() splits every tweet into a vector of letters contained in a list (each element of the list is the original tweet)
 strsplit(tweets, "")
 
 ## splits every tweet into a vector or words contained in a list (each element of the list is the original tweet)
