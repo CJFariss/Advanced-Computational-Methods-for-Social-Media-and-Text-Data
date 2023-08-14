@@ -62,8 +62,8 @@ sub(pattern="c", "", "abcabc")
 ## gregexp()
 
 ## read in fake tweeter data that I made up
-readLines("SIMpoliticalTweets.txt")[1]
-tweets <- readLines("SIMpoliticalTweets.txt", n=-1)
+readLines("Datasets/SIMpoliticalTweets.txt")[1]
+tweets <- readLines("Datasets/SIMpoliticalTweets.txt", n=-1)
 
 ## print the tweets to screen
 tweets
@@ -99,10 +99,10 @@ tweet_data <- as.data.frame(cbind(obama,love,hate))
 tweet_data
 
 ## write the data frame as a csv file
-write.csv(tweet_data, "tweet_data.csv")
+write.csv(tweet_data, "Datasets/tweet_data.csv")
 
 ## save the tweet data as an R object
-save(tweet_data, file="tweet_data")
+save(tweet_data, file="Datasets/tweet_data.Rdata")
 
 ## the tweet_data object is a document by term dataset made up of a subset of the unique terms that are in the original data file we loaded into R
 tweet_data
@@ -110,7 +110,7 @@ tweet_data
 ## let's make a DTM (document-by-term-matrix) will all the unique terms
 
 ## read in fake tweeter data that I made up
-tweets <- readLines("SIMpoliticalTweets.txt", n=-1)
+tweets <- readLines("Datasets/SIMpoliticalTweets.txt", n=-1)
 
 ## print the tweets to screen
 tweets

@@ -51,7 +51,7 @@ textEdit <- function(text.vector){
 
 ## ----- load data ---------- #
 workingdirectory <- getwd()
-setwd(paste(workingdirectory, "/NYT_Text_Articles/unProcessed_Files/", sep=""))
+setwd(paste(workingdirectory, "Datasets/NYT_Text_Articles/unProcessed_Files/", sep=""))
 
 FILES <- list.files()
 
@@ -108,14 +108,14 @@ for(i in 1:length(rawtext)){
 
 ## ----- make document-by-term matrix ---------- ##
 DTM <- xtabs(freq ~ doc + term, data)
-write.csv(DTM, paste(workingdirectory, "/NYT_Text_Articles/DTM.csv", sep=""), row.names=F)
+write.csv(DTM, paste(workingdirectory, "Datasets/NYT_Text_Articles/DTM.csv", sep=""), row.names=F)
 
 totalwords <- apply(DTM[,-1], 1, sum)
 
 ## ----- make meta data file ---------- ##
 metadata <- as.data.frame(cbind(1:(j-1), totalwords, Headline, Year, Month, Day, NewsService, Byline))
 names(metadata) <- c("doc", "totalwords", "Headline",  "Year", "Month", "Day", "NewsService", "Byline")
-write.csv(metadata, paste(workingdirectory, "/NYT_Text_Articles/metadata.csv", sep=""), row.names=F)
+write.csv(metadata, paste(workingdirectory, "Datasets/NYT_Text_Articles/metadata.csv", sep=""), row.names=F)
 
 ## ----- reset working directory ---------- ##
 setwd(workingdirectory)

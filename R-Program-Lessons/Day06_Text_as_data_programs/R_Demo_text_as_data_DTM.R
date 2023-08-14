@@ -24,7 +24,7 @@
 ##########################################################################
 
 ## load data
-data <- read.csv("SIMpoliticalTweets.txt", header=FALSE)
+data <- read.csv("Datasets/SIMpoliticalTweets.txt", header=FALSE)
 data
 names(data) <- c("text")
 data
@@ -36,7 +36,7 @@ data
 head(data)
 
 ## load stop words to remove from text (these are very common words)
-stopwords <- read.delim("stopwords_twitter.txt", header=FALSE)
+stopwords <- read.delim("Datasets/stopwords_twitter.txt", header=FALSE)
 head(stopwords)
 
 
