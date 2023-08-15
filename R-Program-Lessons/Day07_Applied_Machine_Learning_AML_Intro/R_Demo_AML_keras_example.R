@@ -24,6 +24,9 @@
 ##########################################################################
 
 
+## load package
+install.packages("keras")
+library(keras)
 
 ## load the dataset from the keras package
 mnist <- dataset_mnist()
@@ -63,6 +66,9 @@ x_test <- x_test / 255
 y_train <- to_categorical(y_train, 10)
 y_test <- to_categorical(y_test, 10)
 
+
+head(y_train)
+head(y_test)
 
 ## The core data structure of Keras is a model, which denotes the organization of layers and nodes. 
 ## There are many types of layers.
@@ -198,6 +204,5 @@ attributes(output)
 output[1:5,1:10]
 
 
-image(x=1:28, y=1:28, matrix(x_test[1,], nrow=28, ncol=28)[1:28,28:1])
 
 

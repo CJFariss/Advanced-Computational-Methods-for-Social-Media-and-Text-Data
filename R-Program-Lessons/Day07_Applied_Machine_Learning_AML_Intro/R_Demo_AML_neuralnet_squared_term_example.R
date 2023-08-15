@@ -14,7 +14,7 @@
 ##
 ## Overview of Gradient Decent for a linear model with three parameters for an interaction between variables (x, independent variable, features) in their relationship with an outcome variable (y, dependent variable, target variable).
 ##
-## Back propagation is an alogrithim that allows us to generalize the gradient decent algorithim we have already considered.
+## Back propagation is an algorithim that allows us to generalize the gradient decent algorithim we have already considered.
 ##
 ## Back propagation applies the gradient decent algorithm sequential by first evaluating the error or distance between the target variable and the prediction of the target variable, and then using this information to evaluate each of the intermediate or hidden layers in the neural network for each linear combination of features included in that layer.
 ##

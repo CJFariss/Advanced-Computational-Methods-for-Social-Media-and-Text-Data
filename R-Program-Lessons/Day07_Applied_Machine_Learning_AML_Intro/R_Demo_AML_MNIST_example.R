@@ -42,6 +42,19 @@ names(mnist)
 names(mnist$train)
 names(mnist$test)
 
+length(mnist)
+length(mnist$train)
+length(mnist$test)
+
+is.list(mnist)
+is.list(mnist$train)
+is.list(mnist$test)
+
+dim(mnist$train$images)
+dim(mnist$test$images)
+
+head(mnist$test$labels)
+head(mnist$train$labels)
 
 ## transform the data
 x_train <- mnist$train$images/255
@@ -83,3 +96,5 @@ x_train_sum <- apply(x_train, 1, sum)
 ## simple prediction
 par(mar=c(5,4,1,1))
 boxplot(x_train_sum ~ y_train)
+
+
