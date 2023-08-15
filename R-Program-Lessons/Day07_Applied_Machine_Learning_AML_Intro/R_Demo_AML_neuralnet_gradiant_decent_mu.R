@@ -49,7 +49,7 @@ y_error <- matrix(NA, nrow=n, ncol=iterations)
 
 delta_mu_hat <- NA
 
-## sequential iterations to evaulate loss function
+## sequential iterations to evaluate loss function
 for (j in 1:iterations){
     
     ## y_hat: calculate the predicted y_hat based on the best guess of mu
