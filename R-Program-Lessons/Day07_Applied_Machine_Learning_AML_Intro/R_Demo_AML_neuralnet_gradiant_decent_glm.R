@@ -1,4 +1,4 @@
-## R_Demo_neuralnet_gradiant_decent_glm.R
+## R_Demo_AML_neuralnet_gradiant_decent_glm.R
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
 ## COURSE NAME: Advanced Computational Methods for Social Media and Textual Data (3B)

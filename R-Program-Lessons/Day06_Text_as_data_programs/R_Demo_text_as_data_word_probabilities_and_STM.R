@@ -41,7 +41,7 @@ summary(word_probs)
 
 ## graph word probabilities
 par(mfrow=c(2,2), mar=c(4,4,1,1))
-truehist(word_probs)
+MASS::truehist(word_probs)
 
 ## set the total number words across all the documents in the corpus
 total_words <- 100000
@@ -60,9 +60,13 @@ length(table(total_corpus))
 table(total_corpus)
 
 ## make functions to text if the word is "even" or "odd"
-is.even <- function(x) x %% 2 == 0
-is.odd <- function(x) x %% 2 != 0
+is.even <- function(x){ 
+  return(x %% 2 == 0)
+}
 
+is.odd <- function(x){
+  return(x %% 2 != 0)
+}
 ## split corpus into even and odd parts
 even_corpus <- total_corpus[is.even(total_corpus)]
 length(even_corpus)
@@ -105,6 +109,10 @@ table(apply(docs_data[,5:6],1,sum))
 docs_data[1,7]
 
 is.character(docs_data[,7])
+
+summary(docs_data[,1:6])
+
+table(apply(docs_data[,5:6],1,sum))
 
 ## create 1000 simulated documents by randomly assigning words to each of the documents
 docs <- lapply(1:1000, function(i){
@@ -159,14 +167,17 @@ table(apply(fit$theta, 1, sum))
 summary(fit$theta)
 
 ## make some more graphs
+dev.off()
+par(mfrow=c(2,2), mar=c(4,4,1,1))
 plot(fit$theta[,1], docs_data$prop_odds)
 plot(fit$theta[,1], docs_data$prop_evens)
 
 plot(fit$theta[,2], docs_data$prop_odds)
 plot(fit$theta[,2], docs_data$prop_evens)
 
-plot(fit$theta[,3], docs_data$prop_odds)
-plot(fit$theta[,3], docs_data$prop_evens)
+
+#plot(fit$theta[,3], docs_data$prop_odds)
+#plot(fit$theta[,3], docs_data$prop_evens)
 
 plot(fit$theta[,1], docs_data$prop_odds)
 plot(fit$theta[,2], docs_data$prop_evens)
@@ -174,11 +185,12 @@ plot(fit$theta[,2], docs_data$prop_evens)
 plot(fit$theta[,1], docs_data$prop_evens)
 plot(fit$theta[,2], docs_data$prop_odds)
 
-cor(fit$theta[,1], docs_data$prop_odds)
-cor(fit$theta[,2], docs_data$prop_evens)
+fit <- stm(documents=DTM, K=10)
 
-cor(fit$theta[,2], docs_data$prop_odds)
-cor(fit$theta[,1], docs_data$prop_evens)
+dim(fit$theta)
+
+summary(fit$theta)
+
 
 
 ## another simulation this time using the Dirichlet density function

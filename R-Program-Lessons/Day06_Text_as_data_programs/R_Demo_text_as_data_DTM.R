@@ -80,12 +80,18 @@ table(unlist(tweet.term.list))
 tweet.term.list[[1]] %in% as.character(stopwords$V1)
 
 ## remove stopwords with not ! symbol for first elemnet in list of words (! flips FALSE to TRUE and TRUE to FALSE)
-tweet.term.list[[1]][! tweet.term.list[[1]] %in% as.character(stopwords$V1) ]
+! tweet.term.list[[1]] %in% as.character(stopwords$V1)
+
+index <- ! tweet.term.list[[1]] %in% as.character(stopwords$V1) 
+tweet.term.list[[1]][index]
+
+tweet.term.list[[1]][! tweet.term.list[[1]] %in% as.character(stopwords$V1)]
 
 
 ## loop through elements of loop and remove stop words from each tweet
 for(i in 1:length(tweet.term.list)){
-    tweet.term.list[[i]] <- tweet.term.list[[i]][! tweet.term.list[[i]] %in% as.character(stopwords$V1) ]
+    index <- ! tweet.term.list[[i]] %in% as.character(stopwords$V1)
+    tweet.term.list[[i]] <- tweet.term.list[[i]][index]
 }
 tweet.term.list
 
@@ -155,7 +161,10 @@ newdata
 newdata <- do.call("rbind", data.list)
 newdata
 
-## create matric of documents by terms with xtabs() function
+## create matrix of documents by terms with xtabs() function
+binary_DTM <- xtabs( ~ Doc + Var1, data=newdata)
+binary_DTM
+
 DTM <- xtabs(Freq ~ Doc + Var1, data=newdata)
 DTM
 
@@ -220,6 +229,8 @@ DDM
 ## create a term_by_term matrix
 TTM <- t(DTM) %*% DTM
 TTM
+
+
 
 
 ## create the TTM with a loop instead of using matrix multiplication

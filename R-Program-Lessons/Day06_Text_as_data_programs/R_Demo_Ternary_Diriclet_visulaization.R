@@ -13,7 +13,7 @@
 ## Introduction to tutorial:
 ##
 ## (1) The Ternary plot shows the distributions of random draws from a Diriclet distribution
-## (2) The draws are situated within a 3-dimensional simplex. The values of the draws are also coordiantes within the space of the 3-dimensional simplex. The values range from 0 to 1.
+## (2) The draws are situated within a 3-dimensional simplex. The values of the draws are also coordinates within the space of the 3-dimensional simplex. The values range from 0 to 1.
 ## (3) Any point within the space of the 3-dimensional simplex also must sum to 1. 
 ##
 ##########################################################################

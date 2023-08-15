@@ -28,7 +28,7 @@ library(tm)
 library(SnowballC)
 
 ## load data
-data <- read.csv("SIMpoliticalTweets.txt", header=FALSE)
+data <- read.csv("Datasets/SIMpoliticalTweets.txt", header=FALSE)
 data
 names(data) <- "text"
 data
@@ -66,7 +66,7 @@ head(out$vocab)
 head(out$meta)
 
 ## fit a structural topic model
-fit <- stm(documents=out$documents, vocab=out$vocab, data=out$meta, K=10)
+fit <- stm(documents=out$documents, vocab=out$vocab, data=out$meta, K=3)
 
 ## inspect attributes
 attributes(fit)
@@ -79,3 +79,5 @@ fit$theta
 apply(fit$theta, 1, sum)
 
 out$meta
+
+data.frame(text = out$meta$text, topic1=fit$theta[,1], topic2=fit$theta[,2], topic3=fit$theta[,3])

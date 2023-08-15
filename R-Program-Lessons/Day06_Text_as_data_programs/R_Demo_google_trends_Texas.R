@@ -27,7 +27,7 @@ library(countrycode)
 library(stm)
 library(tm)
 library(MASS)
-library(colorbrewer)
+#library(colorbrewer)
 library(bcp)
 
 

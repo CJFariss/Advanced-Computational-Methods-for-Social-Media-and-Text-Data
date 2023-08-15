@@ -1,4 +1,4 @@
-## R_Demo_factor_analysis.R file
+## R_Demo_Measurement_factor_analysis.R file
 ##########################################################################
 ## INSTRUCTOR: Christopher Fariss
 ## COURSE NAME: Advanced Computational Methods for Social Media and Textual Data (3B)
@@ -72,6 +72,14 @@ fit <- factanal(x, factor=1, scores="regression")
 
 fit
 
+MASS::truehist(fit$scores)
+
+## what are the loadings?
+cor(fit$scores, scale(x1))
+cor(fit$scores, scale(x2))
+cor(fit$scores, scale(x3))
+
+
 ## plot true latent variable with posterior mean
 par(mar=c(4,4,1,1), font=2, font.lab=2, cex=1.3)
 plot(fit$scores, theta, xlim=c(-3,3), ylim=c(-3,3), ylab="true theta", xlab="factor analysis scores")
@@ -80,6 +88,7 @@ abline(a=0, b=1, col=2, lwd=2)
 
 D <- nrow(x)
 parameters_list <- c(c(1,1,1), runif(D,-1,1))
+parameters_list <- c(c(1,1,1), scale(apply(x,1,mean))[,1])
 
 # user defined function passed to optim
 factor_analysis_func <- function(par, y, iterate=TRUE){
@@ -101,15 +110,18 @@ factor_analysis_func <- function(par, y, iterate=TRUE){
     y[,2] <- (y[,2] - mean(y[,2]))/sd(y[,2])
     y[,3] <- (y[,3] - mean(y[,3]))/sd(y[,3])
     
-    out <- -sum((y[,1]-y.hat1)^2 + (y[,2]-y.hat2)^2 + (y[,3]-y.hat3)^2)
+    ## sse
+    #out <- -sum((y[,1]-y.hat1)^2 + (y[,2]-y.hat2)^2 + (y[,3]-y.hat3)^2)
+    
+    ## mle
+    out <- sum(log(dnorm(y[,1], mean=y.hat1, sd=1)) + log(dnorm(y[,2], mean=y.hat2, sd=1)) + log(dnorm(y[,3], mean=y.hat3, sd=1)))
     
     return(out)
 }
 
-out <- optim(par = parameters_list, factor_analysis_func, y=x, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
+out <- optim(par = parameters_list, fn=factor_analysis_func, y=x, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
 out
 names(out)
-
 
 out_scores <- out$par[4:length(out$par)]
 
@@ -120,7 +132,9 @@ par(mar=c(4,4,1,1), font=2, font.lab=2, cex=1.3)
 plot(out_scores, theta, xlim=c(-3,3), ylim=c(-3,3), ylab="true theta", xlab="factor analysis scores")
 abline(a=0, b=1, col=2, lwd=2)
 
-cor(fit$scores, out_scores)
+cor(fit$scores, theta) ## base factanal output and the true scores
+cor(out_scores, theta) ## my function and the true scores
+cor(fit$scores, out_scores) ## base factanal output and my function
 
 plot(fit$scores, out_scores)
 
@@ -139,7 +153,7 @@ D <- nrow(x)
 parameters_list <- c(1,1,1)
 
 # user defined function passed to optim
-factor_analysis_func <- function(par, y, iterate=TRUE){
+factor_analysis_func_v2 <- function(par, y, iterate=TRUE){
     
     #a <- par[1:3]
     #b <- par[4:6]
@@ -149,37 +163,77 @@ factor_analysis_func <- function(par, y, iterate=TRUE){
     y[,3] <- (y[,3] - mean(y[,3]))/sd(y[,3])
     
     loadings <- par[1:3]
-    theta <- t(loadings) %*% solve(cov(y)) %*% t(y)
+    theta_hat <<- t(loadings) %*% solve(cov(y)) %*% t(y)
     
-    theta <- (theta - mean(theta))/sd(theta)
+    theta_hat <<- (theta_hat - mean(theta_hat))/sd(theta_hat)
     
-    y.hat1 <- loadings[1] * theta
-    y.hat2 <- loadings[2] * theta
-    y.hat3 <- loadings[3] * theta
+    y.hat1 <- loadings[1] * theta_hat
+    y.hat2 <- loadings[2] * theta_hat
+    y.hat3 <- loadings[3] * theta_hat
     
     #y.hat1 <- (y.hat1-mean(y.hat1))/sd(y.hat1)
     #y.hat2 <- (y.hat2-mean(y.hat2))/sd(y.hat2)
     #y.hat3 <- (y.hat3-mean(y.hat3))/sd(y.hat3)
     
+    ## sse
+    #out <- -sum((y[,1]-y.hat1)^2 + (y[,2]-y.hat2)^2 + (y[,3]-y.hat3)^2)
     
-    
-    out <- -sum((y[,1]-y.hat1)^2 + (y[,2]-y.hat2)^2 + (y[,3]-y.hat3)^2)
-    
+    ## mle
+    out <- sum(log(dnorm(y[,1], mean=y.hat1, sd=1)) + log(dnorm(y[,2], mean=y.hat2, sd=1)) + log(dnorm(y[,3], mean=y.hat3, sd=1)))    
     return(out)
 }
 
-out <- optim(par = parameters_list, factor_analysis_func, y=x, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
+## optim methods: "Nelder-Mead", "BFGS", "CG", "L-BFGS-B", "SANN",
+out <- optim(par = parameters_list, fn=factor_analysis_func_v2, y=x, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
 out
 names(out)
 out$par
 
+theta_hat
+
+## this doesn't work because you need to standardize x
+plot(t(out$par) %*% solve(cov(x)) %*% t(x), theta_hat)
 plot(t(out$par) %*% solve(cov(x)) %*% t(x), theta)
 
-plot(t(out$par) %*% solve(cov(scale(x)[,1:3])) %*% t(scale(x)[,1:3]), theta)
+## this works because we are standardizing x
+x_standardized <- scale(x)[,1:3]
+plot(t(out$par) %*% solve(cov(x_standardized)) %*% t(x_standardized), theta)
 abline(a=0, b=1, col=2, lwd=2)
-cor(c(t(out$par) %*% solve(cov(scale(x)[,1:3])) %*% t(scale(x)[,1:3])), theta)
+cor(c(t(out$par) %*% solve(cov(x_standardized)) %*% t(x_standardized)), theta)
 
-cor(fit$scores, theta)
+## these values should be exactly the same up to some rounding errors (theta_hat was made by the second function)
+plot(t(out$par) %*% solve(cov(x_standardized)) %*% t(x_standardized), theta_hat)
+cor(c(t(out$par) %*% solve(cov(x_standardized)) %*% t(x_standardized)), c(theta_hat))
 
-cor(fit$scores, out_scores)
+cor(fit$scores, theta) ## base factanal output and the true scores
+cor(out_scores, theta) ## my function and the true scores
+cor(fit$scores, out_scores) ## base factanal output and my function
 
+
+
+
+
+## using the R help example
+
+## function is genearlized to do this yet
+
+# A little demonstration, v2 is just v1 with noise,
+# and same for v4 vs. v3 and v6 vs. v5
+# Last four cases are there to add noise
+# and introduce a positive manifold (g factor)
+v1 <- c(1,1,1,1,1,1,1,1,1,1,3,3,3,3,3,4,5,6)
+v2 <- c(1,2,1,1,1,1,2,1,2,1,3,4,3,3,3,4,6,5)
+v3 <- c(3,3,3,3,3,1,1,1,1,1,1,1,1,1,1,5,4,6)
+v4 <- c(3,3,4,3,3,1,1,2,1,1,1,1,2,1,1,5,6,4)
+v5 <- c(1,1,1,1,1,3,3,3,3,3,1,1,1,1,1,6,4,5)
+v6 <- c(1,1,1,2,1,3,3,3,4,3,1,1,1,2,1,6,5,4)
+m1 <- cbind(v1,v2,v3,v4,v5,v6)
+cor(m1)
+factanal(m1, factors = 1) # varimax is the default
+factanal(m1, factors = 1, rotation = "promax")
+
+
+out <- optim(par = parameters_list, fn=factor_analysis_func_v2, y=m1, method="BFGS", control=list(fnscale = -1), hessian = TRUE)
+out
+names(out)
+out$par

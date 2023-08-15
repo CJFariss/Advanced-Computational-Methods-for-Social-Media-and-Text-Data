@@ -12,7 +12,7 @@
 ##########################################################################
 ## Introduction to tutorial:
 ##
-## Use the google trends API to access google trends data and genearte a graph comparing search terms for a specific geographic and temporal context.
+## Use the google trends API to access google trends data and generate a graph comparing search terms for a specific geographic and temporal context.
 ##
 ## Examples taken from:
 ## Dancy, Geoff and Christopher J. Fariss. “The Global Resonance of Human Rights: What Google Trends Can Tell Us.” American Political Science Review (Forthcoming).

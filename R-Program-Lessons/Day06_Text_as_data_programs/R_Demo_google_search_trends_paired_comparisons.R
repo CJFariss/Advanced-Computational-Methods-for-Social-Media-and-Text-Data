@@ -25,12 +25,12 @@ library(countrycode)
 library(stm)
 library(tm)
 library(MASS)
-library(colorbrewer)
+#library(colorbrewer)
 
 
 ## load necessary libraries 
 ## change groundhog to TRUE to install original versions of libraries from April-2022
-source("groundhog_library_func.R")
+source("R-Program-Lessons/Day06_Text_as_data_programs/groundhog_library_func.R")
 groundhog_library_func(groundhog=FALSE, regular_install=FALSE)
 
 #pdf("Rplots/Google_search_term_pairs.pdf", height=6, width=6)

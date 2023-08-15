@@ -87,7 +87,7 @@ j<-1
 for(i in 1:length(rawtext)){
   if(i>1 & rawtext[i]==STRING){
     doc[[j]] <- temp
-    writeLines(doc[[j]], con=paste(workingdirectory, "/NYT_Text_Articles/Processed_Files/", j, ".txt", sep=""))
+    writeLines(doc[[j]], con=paste(workingdirectory, "Datasets/NYT_Text_Articles/Processed_Files/", j, ".txt", sep=""))
     terms[[j]] <- unlist(strsplit(textEdit(doc[[j]]), " "))
     newdata <- cbind(j, as.data.frame(table(terms[[j]])))
     names(newdata) <- c("doc", "term", "freq")
