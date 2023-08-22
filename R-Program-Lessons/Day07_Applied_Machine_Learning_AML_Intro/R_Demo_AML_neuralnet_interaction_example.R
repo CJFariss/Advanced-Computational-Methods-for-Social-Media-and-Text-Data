@@ -146,7 +146,7 @@ for (j in 1:iterations){
     
     ## calculate the predicted y_hat based on the observed x variable and the best guess of alpha and beta
     
-    ## observed layer: feed foward with the first set of linear transformations
+    ## observed layer: feed forward with the first set of linear transformations
     l1[,j] <- alpha_hat[1,j] + w_hat[1,j] * x1 + w_hat[2,j] * x2
     l2[,j] <- alpha_hat[2,j] + w_hat[3,j] * x1 + w_hat[4,j] * x2
     

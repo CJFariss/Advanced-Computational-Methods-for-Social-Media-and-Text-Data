@@ -27,8 +27,8 @@ library(MASS)
 
 ## set learning rate this varies on the unit interval (0 to 1]
 lr <- .2
-#lr <- .01
-#lr <- 1
+lr <- .05
+lr <- .9
 
 y <- c(1,2,3,4,5)
 ##y <- rnorm(1000, pi, 1)
@@ -56,7 +56,7 @@ for (j in 1:iterations){
     
     y_hat[,j] <- mu_hat[j]
     
-    ## risidual: the difference between the predicted y (y_hat) and y is the error for y
+    ## residual: the difference between the predicted y (y_hat) and y is the error for y
     y_error[,j] <- y_hat[,j] - y
     
     ## loss: the estimated error is used to calculate the unexplained variance between y and y_hat, which is the sum of squared errors

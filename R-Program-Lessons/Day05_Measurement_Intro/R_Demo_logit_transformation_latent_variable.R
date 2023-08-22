@@ -70,7 +70,7 @@ n <- length(theta)
 
 
 ## set beta here (pick three values for beta, the item discrimination parameter)
-beta <- c(.5,1,3,5)
+beta <- c(.5,1,3,2000)
 
 par(mfrow=c(4,3), mar=c(5,3,.5,.5))
 for(j in 1:length(beta)){

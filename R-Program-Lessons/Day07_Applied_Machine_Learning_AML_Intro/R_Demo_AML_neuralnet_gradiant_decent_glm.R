@@ -23,7 +23,7 @@ library(MASS)
 library(boot)
 library(gtools)
 
-lr <- .2
+lr <- .5
 n <- 100
 x <- rnorm(n)
 
@@ -46,7 +46,7 @@ y_hat <- matrix(NA, nrow=n, ncol=iterations)
 y_error <- matrix(NA, nrow=n, ncol=iterations)
 delta <- matrix(NA, nrow=2, ncol=iterations)
 
-## sequential iterations to evaulate loss function
+## sequential iterations to evaluate loss function
 for (j in 1:iterations){
     
     ## calculate the predicted y_hat based on the observed x variable and the best guess of alpha and beta
@@ -73,7 +73,7 @@ for (j in 1:iterations){
 
 ## estimate glm model
 fit <- glm(y~x, family=binomial("logit"))
-fit
+summary(fit)
 
 ## print the last value of the sequence of parameter estimates
 alpha_hat[length(alpha_hat)]
@@ -98,4 +98,5 @@ for(i in 1:length(ALPHA_seq)){
 ## plot the log loss
 contour(ALPHA_seq, BETA_seq,(LOSS), xlab=expression(hat(alpha)), ylab=expression(hat(beta)), cex.lab=1.5)
 lines(alpha_hat, beta_hat, col=2, lwd=4)
+points(alpha_hat, beta_hat, col="navy", pch=.5)
 

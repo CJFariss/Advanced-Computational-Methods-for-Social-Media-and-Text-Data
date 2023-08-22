@@ -18,7 +18,7 @@
 ##
 ## Back propagation applies the gradient decent algorithm sequential by first evaluating the error or distance between the target variable and the prediction of the target variable, and then using this information to evaluate each of the intermediate or hidden layers in the neural network for each linear combination of features included in that layer.
 ##
-## Note that := means "is defined as". Notationally, it represnts <- in R. I've used <- below but you may also encounter notation with the := symbol.
+## Note that := means "is defined as". Notationaly, it represents <- in R. I've used <- below but you may also encounter notation with the := symbol.
 ##
 ######################################################
 ## Estimate a single linear equation:

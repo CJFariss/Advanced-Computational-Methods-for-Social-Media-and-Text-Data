@@ -79,6 +79,10 @@ cor(fit$scores, scale(x1))
 cor(fit$scores, scale(x2))
 cor(fit$scores, scale(x3))
 
+## uniquenesses calculation
+sum((fit$scores - scale(x1))^2)
+sum((fit$scores - scale(x2))^2)
+sum((fit$scores - scale(x3))^2)
 
 ## plot true latent variable with posterior mean
 par(mar=c(4,4,1,1), font=2, font.lab=2, cex=1.3)
@@ -215,7 +219,7 @@ cor(fit$scores, out_scores) ## base factanal output and my function
 
 ## using the R help example
 
-## function is genearlized to do this yet
+## function is not generalized to do this yet
 
 # A little demonstration, v2 is just v1 with noise,
 # and same for v4 vs. v3 and v6 vs. v5
