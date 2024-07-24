@@ -1,5 +1,7 @@
 # Advanced-Computational-Methods-for-Social-Media-and-Text-Data
 
+I recommend using the code and course content at the newest version of my Essex summer school course here: https://github.com/CJFariss/Programming-and-Simulation-Methods-for-Computational-Social-Science?tab=readme-ov-file#day-4-simulation-based-programming-for-model-comparison-and-selection
+
 ## Introduction
 Course Title: *Essex Summer School Advanced Computational Methods for Social Media and Textual Data* (3b)
 
